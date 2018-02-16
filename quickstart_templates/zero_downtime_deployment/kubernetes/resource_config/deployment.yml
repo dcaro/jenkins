@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: tomcat-deployment-${TARGET_ROLE}
+  name: amc-web-deployment-${TARGET_ROLE}
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: tomcat
+        app: amc-web
         role: ${TARGET_ROLE}
     spec:
       containers:
-      - name: tomcat-container
+      - name: amc-web-container
         image: dcaro/amc:${AMC_WEB_VERSION}
         ports:
         - containerPort: 80
