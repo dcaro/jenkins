@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: amc-web-service
+  name: amc-service
   labels:
     app: amc-web
     role: ${TARGET_ROLE}
@@ -9,7 +9,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: amc-web
+    app: amc
     role: ${TARGET_ROLE}
   ports:
     - port: 80
