@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: amc-web-deployment-${TARGET_ROLE}
+  name: amc-deployment-${TARGET_ROLE}
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: amc-web
+        app: amc
         role: ${TARGET_ROLE}
     spec:
       containers:
-      - name: amc-web-container
+      - name: amc-container
         image: dcaro/amc:${AMC_WEB_VERSION}
         ports:
         - containerPort: 80
