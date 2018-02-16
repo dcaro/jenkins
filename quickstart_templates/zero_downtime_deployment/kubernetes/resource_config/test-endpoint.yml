@@ -1,14 +1,14 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: amc-web-test-${TARGET_ROLE}
+  name: amc-test-${TARGET_ROLE}
   labels:
-    app: amc-web
+    app: amc
     role: test-${TARGET_ROLE}
 spec:
   type: LoadBalancer
   selector:
-    app: amc-web
+    app: amc
     role: ${TARGET_ROLE}
   ports:
     - port: 80
