@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: amc-service
   labels:
-    app: amc-web
+    app: amc
     role: ${TARGET_ROLE}
     env: prod
 spec:
