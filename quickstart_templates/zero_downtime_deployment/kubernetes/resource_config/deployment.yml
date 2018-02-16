@@ -13,6 +13,7 @@ spec:
       containers:
       - name: amc-container
         image: dcaro/amc:${AMC_WEB_VERSION}
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         readinessProbe:
