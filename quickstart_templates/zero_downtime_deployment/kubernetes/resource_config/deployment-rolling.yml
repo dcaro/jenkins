@@ -14,11 +14,11 @@ spec:
       - name: tomcat-container
         image: dcaro/amc:${AMC_WEB_VERSION}
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         readinessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 80
   strategy:
     type: RollingUpdate
     rollingUpdate:
