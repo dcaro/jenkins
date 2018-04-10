@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: amc-container
-        image: dcaro/demo-aks:${env.BUILD_NUMBER}
+        image: dcaro/demo-aks:${BUILD_NUMBER}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
